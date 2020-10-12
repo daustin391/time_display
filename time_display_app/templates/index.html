@@ -5,10 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Display</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
-    <h1>{{time}}</h1>
+    <div class="wrapper">
+        <h1>The current time and date:</h1>
+        <div>
+            <h2>{{date}}</h2>
+            <h2>{{time}}</h2>
+        </div>
+    </div>
 </body>
 
 </html>

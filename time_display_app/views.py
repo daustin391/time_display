@@ -3,5 +3,8 @@ from datetime import datetime
 
 
 def time_display(request):
-    context = {"time": datetime.now().strftime("%d/%m/%Y")}
+    context = {
+        "date": datetime.now().strftime("%b %-d, %Y"),
+        "time": datetime.now().strftime("%-I:%M %p"),
+    }
     return render(request, "index.html", context)
